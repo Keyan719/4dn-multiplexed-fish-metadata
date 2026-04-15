@@ -55,7 +55,7 @@ Metadata and download manifests for **mouse** multiplexed FISH datasets from the
 **Tastemel M et al. (2025) — PMID:40060486**
 
 - **Cell type:** Mouse embryonic stem cells (F123-CASTx129 hybrid with Sox2 reporter tags and synthetic CTCF-binding site insertions)
-- **Chromatin target:** 205-kb region on Chr11 (Sox2 gene to super-enhancer); also a 7.5-kb synthetic CBS insertion between Sox2 and SE
+- **Chromatin target:** 205-kb region on Chr3 (Sox2 gene to super-enhancer); also a 7.5-kb synthetic CBS insertion between Sox2 and SE
 - **Experiment type:** Multiplexed FISH with FKBP12(F36V)-dTAG degron for acute CTCF or RAD21 depletion, during ESC self-renewal and early differentiation; also KAT6B knockout
 - **Conditions (11 sets):** KAT6B KO; FKBP12-RAD21 treated/control; FKBP12-CTCF treated at 12 h / 24 h across differentiation time points
 
@@ -75,7 +75,7 @@ Metadata and download manifests for **mouse** multiplexed FISH datasets from the
 **Huang H et al. (2021) — PMID:34002095**
 
 - **Cell type:** Mouse embryonic stem cells (F123-CASTx129 hybrid with Sox2 RNA-FISH capability)
-- **Chromatin target:** ~30-kb region between the Sox2 gene and its super-enhancer on Chr11, with synthetic CTCF site insertions at different positions
+- **Chromatin target:** ~210-kb region around Sox2 and its super-enhancer on Chr3, with synthetic CTCF site insertions at different positions
 - **Experiment type:** Multiplexed chromatin + RNA FISH, testing how engineered CTCF-binding site insertions between / downstream of Sox2 and its SE alter looping and Sox2 transcription
 - **Conditions (5 sets):** 4 CTCF sites between Sox2 and SE; 4 CTCF sites downstream of both; 4 mutant (non-binding) CTCF sites; WT controls; each with simultaneous Sox2 RNA FISH
 
@@ -134,7 +134,7 @@ Metadata and download manifests for **mouse** multiplexed FISH datasets from the
 ### 11. HungTC_2024_PMID38238628
 **Hung TC et al. (2024) — PMID:38238628**
 
-- **Cell type:** Mouse embryonic fibroblasts (MEF) or similar primary cells
+- **Cell type:** Mouse developing limb buds (primary tissue)
 - **Chromatin target:** Consecutive 10-kb loci at the Pitx1 developmental locus, imaged with Cy5-labeled readout probes
 - **Experiment type:** Chromatin tracing of the Pitx1 enhancer–promoter locus with high biological replication (5 biological replicates)
 - **Conditions (1 set, 5 bio reps):** Wild-type cells
@@ -197,6 +197,10 @@ Individual per-paper files in the `metadata/` folder.
 | bio_rep_index | Biological replicate index for this file |
 | trace_core_file_accession | 4DN file accession for trace core CSV |
 | trace_core_url | Direct S3 download URL for FOF-CT trace core CSV |
+| readout_resolution | Step size per readout (e.g. 5 kb, ~50 kb, ~1 Mb) |
+| region_size | Total genomic span of the traced region (e.g. ~2.28 Mb, genome-wide) |
+| genomic_region | Genomic coordinates or target label (e.g. Chr6:50500001-52780076, 473 TADs Chr1-Chr19) 
+| genome_assembly | Reference genome assembly (GRCm38 for all) |
 | all_fofct_types | All FOF-CT file types available (pipe-separated) |
 
 ## Download Trace Files
